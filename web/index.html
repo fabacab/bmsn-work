@@ -9,6 +9,14 @@
         <title>{block:SearchPage}Search results for "{SearchQuery}" - {/block:SearchPage}{block:TagPage}{Tag} - {/block:TagPage}{block:DayPage}Posts on {Month} {DayOfMonth}, {Year} - {/block:DayPage}{block:PostSummary}{PostSummary} - {/block:PostSummary}{Title}</title>
         <meta name="description" content="{MetaDescription}">
         <meta name="keywords" content="{block:Tags}{Tag}, {/block:Tags}{Title}">
+        <meta name="text:Open Graph URL" content="http://iam.bradleymanning.org/">
+        <meta name="image:Open Graph Avatar" content="http://static.tumblr.com/edmq1ti/RDGmnqbd8/l1z77rz.jpg">
+        {block:IfOpenGraphURL}
+        <meta property="og:image" content="{image:Open Graph Avatar}"/>
+        <meta property="og:title" content="{Title}"/>
+        <meta property="og:description" content="{MetaDescription}"/>
+        <meta property="og:url" content="{text:Open Graph URL}"/>
+        {/block:IfOpenGraphURL}
         <meta name="Copyright" content="I Am Hero theme - Copyright {CopyrightYears} by Bradley Manning Support Network">
 
         <!-- Show/hide template sections. (Default is to show all.) -->
@@ -97,10 +105,10 @@
 
         <link rel="stylesheet" href="//static.tumblr.com/ybjxbev/b2Smn6hxh/normalize-1.1.0.css">
         <!--[if lte IE 8]>
-          <link rel="stylesheet" href="css/ie.css">
+          <link rel="stylesheet" href="http://static.tumblr.com/edmq1ti/YdHmns9tm/ie.css">
         <![endif]-->
         <!--[if lte IE 7]>
-          <link rel="stylesheet" href="css/ie7.css">
+          <link rel="stylesheet" href="http://static.tumblr.com/edmq1ti/nKPmns9ue/ie7.css">
         <![endif]-->
         <script src="//code.jquery.com/jquery-1.9.1.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/masonry/2.1.08/jquery.masonry.min.js"></script>
@@ -108,15 +116,33 @@
         <script src="//static.tumblr.com/ggljfev/dd6mn48jc/modernizr-2.6.2-respond-1.1.0.min.js"></script>
         <script src="//static.tumblr.com/ggljfev/ljEmn48ha/moment-2.0.0.min.js"></script>
         <!--[if lte IE 8]>
-          <script src="js/vendor/selectivizr.js"></script>
-          <script src="js/vendor/css3-mediaqueries.js"></script>
-          <script src="js/vendor/PIE.js"></script>
+          <script src="http://static.tumblr.com/edmq1ti/EUqmnr4a5/selectivizr.js"></script>
+          <script src="http://static.tumblr.com/edmq1ti/8NNmnr48x/css3-mediaqueries.js"></script>
+          <script src="http://static.tumblr.com/edmq1ti/Gmemnr49k/pie.js"></script>
         <![endif]-->
         <!--[if lt IE 8]>
           <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE8.js"></script>
         <![endif]-->
+         <script>
+           $(function() {
+             if (window.PIE) {
+               $('#MainNav a, #campaign-tweet-this li a').each(function() {
+                 PIE.attach(this);
+               });
+             }
+           });
+         </script>
+
         <script type="text/javascript">
             $(document).ready(function(){
+                 //iframe control IE fix
+                 if(!$.support.leadingWhitespace){
+                     console.log("IE<=8");
+                     $('#tumblr_controls').remove();
+                     $controls_iframe = $('<iframe width="330" height="25" id="tumblr_controls" src="http://assets.tumblr.com/assets/html/iframe.html?src=http%3A%2F%2Fiam.bradleymanning.org%2F&lang=en_US&name=iambradleymanning&avatar=http%3A%2F%2F24.media.tumblr.com%2Favatar_56377ed12d4e_64.png&title=I+am+Bradley+Manning&url=http%3A%2F%2Fiam.bradleymanning.org%2F&_v=dcf1c0a578dbfd6678efa6e9b3e760bc" style="top: 0px; right: 0px; overflow: hidden; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; position: absolute; z-index: 2147483647; background-color: transparent;" allowTransparency="" marginheight="0" marginWidth="0" frameBorder="0">');
+                     $controls_iframe.appendTo('body');
+                 }
+
             	// date change thingy
                 var today = moment();
                 var todate = today.diff(moment('{text:Imprisoned on date}'),'days');
