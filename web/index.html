@@ -1595,7 +1595,7 @@ ol.notes .avatar{width: 30px; padding-right: 10px;}
 
                 <section id="photo-feed">
                 	<h3>Your Photos</h3>
-                	<div class="photo-links"><a href="/submit#tumblr-content">Add Your Photo</a><a href="/your-photos">See Them All</a></div>
+                	<div class="photo-links">{block:SubmissionsEnabled}<a href="/submit#tumblr-content">{SubmitLabel}</a>{/block:SubmissionsEnabled}<a href="/your-photos">See Them All</a></div>
                 	<ul class="nav-links">
                 		<li><a href="#" class="featured selected" data-option="featured">Featured</a></li>
                 		<li>|</li>
