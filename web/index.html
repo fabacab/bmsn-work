@@ -174,7 +174,7 @@ function getPhotos(target, paramString){
 
 $(function(){
 
-  getPhotos("featured", ""); // Empty string as second paramString means "recent"
+  getPhotos("recent", "");
 
   $("#photo-feed .nav-links li a").click(function(e){
     var option = $(this).data("option");
