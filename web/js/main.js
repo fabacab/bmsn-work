@@ -6,7 +6,7 @@ function getPhotos(target, paramString){
 			results.response.posts.forEach(function(post){
 		    if(post.type == "photo"){
 		      post["photos"].forEach(function(photo){
-            $("#photo-feed .feed ."+target).append("<div class='box'><img src='"+photo.alt_sizes[0].url+"'></div>");
+            $("#photo-feed .feed ."+target).append("<div class='box'><a href='"+post.post_url+"'><img src='"+photo.alt_sizes[0].url+"'></a></div>");
   		    });	
 		    }
 			});
@@ -31,16 +31,16 @@ $(function(){
     var option = $(this).data("option");
     $("#photo-feed .nav-links .selected").removeClass("selected");
     $(this).addClass("selected");
-    $("#photo-feed .feed > div").html("");
+    //$("#photo-feed .feed > div").html("");
     switch(option){
     	case "recent":
-        getPhotos("recent", "");
+        if($("#photo-feed .feed ."+option+" .box").length == 0){getPhotos("recent", "");} else {$("#photo-feed .feed ."+option).show(); $("#photo-feed .feed ."+option).siblings().hide();}
         break;
       case "featured":
-        getPhotos("featured", "&tag=notables");
+        if($("#photo-feed .feed ."+option+" .box").length == 0){getPhotos("featured", "&tag=notables");} else {$("#photo-feed .feed ."+option).show(); $("#photo-feed .feed ."+option).siblings().hide();}
         break;
       case "veterans":
-        getPhotos("veterans", "&tag=veterans");
+        if($("#photo-feed .feed ."+option+" .box").length == 0){getPhotos("veterans", "&tag=veterans");} else {$("#photo-feed .feed ."+option).show(); $("#photo-feed .feed ."+option).siblings().hide();}
         break;
     }
     return false;
