@@ -1251,9 +1251,7 @@ ol.notes .avatar{width: 30px; padding-right: 10px;}
                         {block:Photo}
                         <article id="{PostID}" class="box brick post photo{block:IfAllPostsXsSize} t_xs{/block:IfAllPostsXsSize}{block:IfAllPostsXlSize} t_xl{/block:IfAllPostsXlSize}{block:IfNotAllPostsXsSize}{block:IfNotAllPostsDefaultSize}{block:IfNotAllPostsXlSize}{block:HasTags} {block:Tags}t_{URLSafeTag} {/block:Tags}{/block:HasTags}{/block:IfNotAllPostsXlSize}{/block:IfNotAllPostsDefaultSize}{/block:IfNotAllPostsXsSize} {TagsAsClasses}">
                             <header>
-                                {LinkOpenTag}<img {block:HighRes}style="display:none"{/block:HighRes} src="{PhotoURL-500}" alt="{PhotoAlt}" data-highres="{PhotoURL-HighRes}" />{block:HighRes}
-    <img src="{PhotoURL-HighRes}" class="highres">
-{/block:HighRes}{LinkCloseTag}
+                                {LinkOpenTag}<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}" data-highres="{PhotoURL-HighRes}" />{LinkCloseTag}
                                 {block:Caption}{Caption}{/block:Caption}
                             </header>
                             <div class="photoMetaData">
