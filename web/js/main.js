@@ -24,7 +24,7 @@ function getPhotos(target, paramString){
 
 $(function(){
 
-  getPhotos("featured", "&tag=notables");
+  getPhotos("featured", ""); // Empty string as second paramString means "recent"
   
 
   $("#photo-feed .nav-links li a").click(function(e){
