@@ -38,7 +38,7 @@
         <!--[if lt IE 8]>
           <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE8.js"></script>
         <![endif]-->
-	<script src="http://static.tumblr.com/edmq1ti/lI1mnt0pr/main.js"></script>
+        <script src="http://static.tumblr.com/edmq1ti/j3ymntk39/main.js"></script>
          <script>
            $(function() {
              if (window.PIE) {
@@ -59,7 +59,7 @@
                      $controls_iframe.appendTo('body');
                  }
 
-            	// date change thingy
+                // date change thingy
                 var today = moment();
                 var todate = today.diff(moment('May 19, 2010'),'days');
                 $('#dayscount').text(todate);
@@ -136,6 +136,9 @@
                 });
             })
         </script>
+        <script>$(function(){
+    if($("#removeHeader").length != 0){$("article>header").hide();}
+});</script>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -157,9 +160,9 @@
             <div id="MainContent" class="main wrapper clearfix">
                 <header>
                     <h1>I am Bradley Manning</h1>
-                    <h2>Nobody was harmed by these leaks. Only the public benefited.</h2>
-                    <h3>Drop the "Aiding the Enemy" Charge.</h3>
-                    <h4><span id="dayscount">1</span> days of unjust confinement is enough.</h4>
+                    <div id="description"><h2>Because I believe the public deserves the truth and whistleblowers deserve a fair trial.</h2></div>
+                    <h4 id='confine'><span id="dayscount">1</span> days of unjust confinement is enough!</h4>
+                    <h5 id="drop">Drop the "aiding the enemy" charge</h5>
                     <div id="featured-media-wrapper"></div>
                     <div id="slider-wrapper">
                         <div class="slider-wrapper">
@@ -183,30 +186,46 @@
                 <section id="tumblr-content" class="IndexPage TagPage">
                     <h3>Your photos</h3>
                     <h4>(Day or Tag Page Subtitle)</h4>
-                    <ul id="photo-buttons" class="clearfix">
+                    <!--<ul id="photo-buttons" class="clearfix">
                         <li><a href="/submit#tumblr-content">add your photo signature</a></li>
                         <li><a href="/your-photos">view them all</a></li>
-                    </ul>
+                    </ul>-->
                     <div class="brickbox">
                         <article id="50696243945" class="box brick post photo t_xs bradley_manning politics wikileaks united_states submission submission isotope-item">
                             <header>
                                 <a href="http://iam.bradleymanning.org/post/50696243945"><img src="http://24.media.tumblr.com/6f6bf022e245aa80417e6e13991a8465/tumblr_mmoug45wuf1qjab9ao1_500.jpg" alt="Our names are Percival and Connie Hackner. We are US and German citizens and we support Bradley Manning because Connie raised her son Percival to believe in speaking the truth and to stand up against injustice. Without Bradley, the atrocities of the war in Iraq would not have been uncovered. He is a hero not a traitor." data-highres="http://24.media.tumblr.com/6f6bf022e245aa80417e6e13991a8465/tumblr_mmoug45wuf1qjab9ao1_1280.jpg"></a>
-                                <p><a href="http://iam.bradleymanning.org/post/50696243945" rel="bookmark" title="Permalink for Text Post Title">Published <time pubdate="pubdate" datetime="2013-05-21T04:11:54">16 hours ago</time></a></p>
+                                <p>Our names are Percival and Connie Hackner. We are US and German citizens and we support Bradley Manning because Connie raised her son Percival to believe in speaking the truth and to stand up against injustice. Without Bradley, the atrocities of the war in Iraq would not have been uncovered. He is a hero not a traitor.</p>
                             </header>
-                            <p>Our names are Percival and Connie Hackner. We are US and German citizens and we support Bradley Manning because Connie raised her son Percival to believe in speaking the truth and to stand up against injustice. Without Bradley, the atrocities of the war in Iraq would not have been uncovered. He is a hero not a traitor.</p>
+                            <div class='photoMetaData'>
+                                <div class="lmeta">
+                                    <p><a href="http://iam.bradleymanning.org/post/50696243945" rel="bookmark" title="Permalink for Text Post Title">Published <time pubdate="pubdate" datetime="2013-05-21T04:11:54">16 hours ago</time></a></p>
+                                    <ul class="tags">
+                                        <li class=" tt_Bradley+Manning"><a href="http://iam.bradleymanning.org/tagged/Bradley-Manning" title="I am Bradley Manning - Bradley Manning" rel="tag">Bradley Manning</a></li>
+                                        <li class=" tt_politics"><a href="http://iam.bradleymanning.org/tagged/politics" title="I am Bradley Manning - politics" rel="tag">politics</a></li>
+                                        <li class=" tt_wikileaks"><a href="http://iam.bradleymanning.org/tagged/wikileaks" title="I am Bradley Manning - wikileaks" rel="tag">wikileaks</a></li>
+                                        <li class=" tt_United+States"><a href="http://iam.bradleymanning.org/tagged/United-States" title="I am Bradley Manning - United States" rel="tag">United States</a></li>
+                                        <li class=" tt_submission"><a href="http://iam.bradleymanning.org/tagged/submission" title="I am Bradley Manning - submission" rel="tag">submission</a></li>
+                                    </ul>
+                                </div>
+                                <div class="rmeta">
+                                    <div class="sharers">
+                                        <span>SHARE:</span>
+                                        <a class="twiiter" href="https://twitter.com/intent/tweet/?text={block:PostTitle}{URLEncodedPostTitle}%20{/block:PostTitle}{URLEncodedPermalink}{block:Twitter}%20%2Fvia%20%40{TwitterUsername}{/block:Twitter}" {Target}></a>
+                                        <a href="https://www.facebook.com/share.php?u={URLEncodedPermalink}" {Target} class="facebook"></a>
+                                        <a href="http://www.reddit.com/submit?url={URLEncodedPermalink}" {Target} class="reddit"></a>
+                                        <a href="http://digg.com/submit?url={URLEncodedPermalink}" {Target} class="digg"></a>
+                                    </div>
+                                    <div class="shorturl">
+                                    <span>{lang:Short URL}:</span><a href="{ShortURL}">{ShortURL}</a></div>
+                                </div>
+                            </div>
+
                             <footer>
-                                <ul class="tags">
-                                    <li class=" tt_Bradley+Manning"><a href="http://iam.bradleymanning.org/tagged/Bradley-Manning" title="I am Bradley Manning - Bradley Manning" rel="tag">Bradley Manning</a></li>
-                                    <li class=" tt_politics"><a href="http://iam.bradleymanning.org/tagged/politics" title="I am Bradley Manning - politics" rel="tag">politics</a></li>
-                                    <li class=" tt_wikileaks"><a href="http://iam.bradleymanning.org/tagged/wikileaks" title="I am Bradley Manning - wikileaks" rel="tag">wikileaks</a></li>
-                                    <li class=" tt_United+States"><a href="http://iam.bradleymanning.org/tagged/United-States" title="I am Bradley Manning - United States" rel="tag">United States</a></li>
-                                    <li class=" tt_submission"><a href="http://iam.bradleymanning.org/tagged/submission" title="I am Bradley Manning - submission" rel="tag">submission</a></li>
-                                </ul>
                                 <ul class="utils">
                                     <li class="notes">
                                         <a href="http://iam.bradleymanning.org/post/50696243945#notes">12 notes</a>
                                     </li>
-                                    <li class="shortlink">Shortlink: <a href="http://tmblr.co/ZX2SYxlDkqhf" title="Shortlink for Text Post Title" rel="share_this">http://tmblr.co/ZX2SYxlDkqhf</a></li>
+                                    <!--<li class="shortlink">Shortlink: <a href="http://tmblr.co/ZX2SYxlDkqhf" title="Shortlink for Text Post Title" rel="share_this">http://tmblr.co/ZX2SYxlDkqhf</a></li>
                                     <li class="ShareLinks">
                                         <ul>
                                             <li class="share-on-twitter"><a href="https://twitter.com/intent/tweet/?text=http://tmblr.co/ZX2SYxlDkqhf">Share this post on Twitter</a></li>
@@ -214,7 +233,7 @@
                                             <li class="share-on-reddit"><a href="http://www.reddit.com/submit?url=http://tmblr.co/ZX2SYxlDkqhf">Share this post on Reddit</a></li>
                                             <li class="share-on-digg"><a href="http://digg.com/submit?url=http://tmblr.co/ZX2SYxlDkqhf">Share this post on Digg</a></li>
                                         </ul>
-                                    </li>
+                                    </li>-->
                                 </ul>
                             </footer>
                         </article>
@@ -226,7 +245,7 @@
                             </header>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                             <p class="morelink"><a href="TK-LINK">Read more</a></p>
-                            <footer>
+                            <footer style="border-top: 10px solid black; padding-top: 10px;">
                                 <ul class="tags">
                                     <li class=" tt_Bradley+Manning"><a href="http://iam.bradleymanning.org/tagged/Bradley-Manning" title="I am Bradley Manning - Bradley Manning" rel="tag">Bradley Manning</a></li>
                                     <li class=" tt_politics"><a href="http://iam.bradleymanning.org/tagged/politics" title="I am Bradley Manning - politics" rel="tag">politics</a></li>
@@ -234,8 +253,16 @@
                                     <li class=" tt_United+States"><a href="http://iam.bradleymanning.org/tagged/United-States" title="I am Bradley Manning - United States" rel="tag">United States</a></li>
                                     <li class=" tt_submission"><a href="http://iam.bradleymanning.org/tagged/submission" title="I am Bradley Manning - submission" rel="tag">submission</a></li>
                                 </ul>
-                                <ul class="utils">
+                                <ul class="utils abouttextblock">
                                     <li class="notes"><a href="http://iam.bradleymanning.org/post/50696243945#notes">12 notes</a></li>
+                                    <li class="ShareLinks">
+                                        <ul><li class='aboutsharetxt'>SHARE:</li>
+                                            <li class="share-on-twitter"><a href="https://twitter.com/intent/tweet/?text={block:PostTitle}{URLEncodedPostTitle}%20{/block:PostTitle}{URLEncodedPermalink}{block:Twitter}%20%2Fvia%20%40{TwitterUsername}{/block:Twitter}" {Target}>{lang:Share this} on Twitter</a></li>
+                                            <li class="share-on-facebook"><a href="https://www.facebook.com/share.php?u={URLEncodedPermalink}" {Target}>{lang:Share this} on Facebook</a></li>
+                                            <li class="share-on-reddit"><a href="http://www.reddit.com/submit?url={URLEncodedPermalink}" {Target}>{lang:Share this} on Reddit</a></li>
+                                            <li class="share-on-digg"><a href="https://digg.com/submit?url={URLEncodedPermalink}" {Target}>{lang:Share this} on Digg</a></li>
+                                        </ul>
+                                    </li>
                                     <li class="shortlink">Shortlink: <a href="http://tmblr.co/ZX2SYxlDkqhf" title="Shortlink for Text Post Title" rel="share_this">http://tmblr.co/ZX2SYxlDkqhf</a></li>
                                 </ul>
                             </footer>
@@ -281,7 +308,16 @@
                                 </ul>
                                 <ul class="utils">
                                     <li class="notes"><a href="http://iam.bradleymanning.org/post/50696243945#notes">12 notes</a></li>
+                                    <!--
                                     <li class="shortlink">Shortlink: <a href="http://tmblr.co/ZX2SYxlDkqhf" title="Shortlink for Text Post Title" rel="share_this">http://tmblr.co/ZX2SYxlDkqhf</a></li>
+                                    <li class="ShareLinks">
+                                        <ul>
+                                            <li class="share-on-twitter"><a href="https://twitter.com/intent/tweet/?text={block:PostTitle}{URLEncodedPostTitle}%20{/block:PostTitle}{URLEncodedPermalink}{block:Twitter}%20%2Fvia%20%40{TwitterUsername}{/block:Twitter}" {Target}>{lang:Share this} on Twitter</a></li>
+                                            <li class="share-on-facebook"><a href="https://www.facebook.com/share.php?u={URLEncodedPermalink}" {Target}>{lang:Share this} on Facebook</a></li>
+                                            <li class="share-on-reddit"><a href="http://www.reddit.com/submit?url={URLEncodedPermalink}" {Target}>{lang:Share this} on Reddit</a></li>
+                                            <li class="share-on-digg"><a href="https://digg.com/submit?url={URLEncodedPermalink}" {Target}>{lang:Share this} on Digg</a></li>
+                                        </ul>
+                                    </li>-->
                                 </ul>
                             </footer>
                         </article>
@@ -404,12 +440,12 @@
 
 		<section id="photo-feed">
                 	<h3>Your Photos</h3>
-                	<a href="/submit#tumblr-content">Add Your Image</a>
+                	<div class="photo-links"><a href="/submit#tumblr-content">Add Your Photo</a><a href="/your-photos">See Them All</a></div>
                 	<ul class="nav-links">
                 		<li><a href="#" class="featured selected" data-option="featured">Featured</a></li>
                 		<li>|</li>
-                		<li><a href="#" class="veterans" data-option="veterans">Veterans</a></li>
-                		<li>|</li>
+                		<!--<li><a href="#" class="veterans" data-option="veterans">Veterans</a></li>
+                		<li>|</li>-->
                 		<li><a href="#" class="recent" data-option="recent">Most Recent</a></li>
             		</ul>
             		<div class="feed">
