@@ -150,33 +150,31 @@
         <![endif]-->
         <script>
 function getPhotos(target, paramString){
-	$.ajax({
-		url: "http://api.tumblr.com/v2/blog/{text:Open Graph Domain}/posts?api_key=3L0eVSusQgAxs5XPAeqz55XxylQpOGUVedFh2I02UC8dusC5jS&limit=10"+paramString,
-		dataType: 'jsonp',
-		success: function(results){
-			results.response.posts.forEach(function(post){
-		    if(post.type == "photo"){
-		      post["photos"].forEach(function(photo){
+    $.ajax({
+        url: "http://api.tumblr.com/v2/blog/{text:Open Graph Domain}/posts?api_key=3L0eVSusQgAxs5XPAeqz55XxylQpOGUVedFh2I02UC8dusC5jS&limit=10"+paramString,
+        dataType: 'jsonp',
+        success: function(results){
+            results.response.posts.forEach(function(post){
+            if(post.type == "photo"){
+              post["photos"].forEach(function(photo){
             $("#photo-feed .feed ."+target).append("<div class='box'><a href='"+post.post_url+"'><img src='"+photo.alt_sizes[0].url+"'></a></div>");
-  		    });	
-		    }
-			});
-			$("#photo-feed .feed ."+target).siblings().hide();
-			$("#photo-feed .feed ."+target).show();
-			$("#photo-feed .feed ."+target).imagesLoaded(function(){
-		    $("#photo-feed .feed ."+target).masonry({
-		      itemSelector: '.box'
-		    });
+              });
+            }
+            });
+            $("#photo-feed .feed ."+target).siblings().hide();
+            $("#photo-feed .feed ."+target).show();
+            $("#photo-feed .feed ."+target).imagesLoaded(function(){
+            $("#photo-feed .feed ."+target).masonry({
+              itemSelector: '.box'
+            });
       });
-		}
-	});
+        }
+    });
 }
-
 
 $(function(){
 
   getPhotos("featured", ""); // Empty string as second paramString means "recent"
-  
 
   $("#photo-feed .nav-links li a").click(function(e){
     var option = $(this).data("option");
@@ -184,7 +182,7 @@ $(function(){
     $(this).addClass("selected");
     //$("#photo-feed .feed > div").html("");
     switch(option){
-    	case "recent":
+        case "recent":
         if($("#photo-feed .feed ."+option+" .box").length == 0){getPhotos("recent", "");} else {$("#photo-feed .feed ."+option).show(); $("#photo-feed .feed ."+option).siblings().hide();}
         break;
       case "featured":
@@ -195,10 +193,9 @@ $(function(){
         break;
     }
     return false;
-	});	
+    });
 
 });
-
         </script>
          <script>
            $(function() {
@@ -1308,7 +1305,7 @@ ol.notes .avatar{width: 30px; padding-right: 10px;}
                             <div class="photoMetaData">
                                 <div class="lmeta">
                                     <p><a href="{Permalink}" rel="bookmark" title="{lang:Permalink}{block:PostSummary} - {PostSummary}{/block:PostSummary}">{block:Date}<time pubdate="pubdate" datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}T{24HourWithZero}:{Minutes}:{Seconds}">{lang:Posted TimeAgo}</time>{/block:Date}</a></p>
-                                    
+
                                     {block:HasTags}
                                     <ul class="tags">
                                         {block:Tags}<li class="{block:HasTags} tt_{URLSafeTag}{/block:HasTags}"><a href="{TagURL}#tumblr-content" title="{Title} - {Tag}" rel="tag">{Tag}</a></li>{/block:Tags}
@@ -1327,7 +1324,7 @@ ol.notes .avatar{width: 30px; padding-right: 10px;}
                                     <span>{lang:Short URL}:</span><a href="{ShortURL}">{ShortURL}</a></div>
                                 </div>
                             </div>
-                            
+
                             <footer>
                                 <ul class="utils">
                                     {block:NoteCount}
@@ -1371,7 +1368,7 @@ ol.notes .avatar{width: 30px; padding-right: 10px;}
                                         {block:PostNotes}{PostNotes-64}{/block:PostNotes}
                                     </li>
                                     {/block:NoteCount}
-                                    
+
                                     <li class="ShareLinks">
                                         <ul><li class="aboutsharetxt">SHARE:</li>
                                             <li class="share-on-twitter"><a href="https://twitter.com/intent/tweet/?text={block:PostTitle}{URLEncodedPostTitle}%20{/block:PostTitle}{URLEncodedPermalink}{block:Twitter}%20%2Fvia%20%40{TwitterUsername}{/block:Twitter}" {Target}>{lang:Share this} on Twitter</a></li>
@@ -1643,21 +1640,21 @@ ol.notes .avatar{width: 30px; padding-right: 10px;}
                 {/block:IfTweet1}
 
                 <section id="photo-feed">
-                	<h3>Your Photos</h3>
-                	<div class="photo-links">{block:SubmissionsEnabled}<a href="/submit#tumblr-content">{SubmitLabel}</a>{/block:SubmissionsEnabled}<a href="/your-photos">See Them All</a></div>
-                	<ul class="nav-links">
-                		<li><a href="#" class="featured" data-option="featured">Featured</a></li>
-                		<li>|</li>
-                		<!--<li><a href="#" class="veterans" data-option="veterans">Veterans</a></li>
-                		<li>|</li>-->
-                		<li><a href="#" class="recent selected" data-option="recent">Most Recent</a></li>
-            		</ul>
-            		<div class="feed">
-            		  <div class="featured"></div>
-            		  <div class="veterans"></div>
-            		  <div class="popular"></div>
-            		  <div class="recent"></div>
-            		</div>
+                    <h3>Your Photos</h3>
+                    <div class="photo-links">{block:SubmissionsEnabled}<a href="/submit#tumblr-content">{SubmitLabel}</a>{/block:SubmissionsEnabled}<a href="/your-photos">See Them All</a></div>
+                    <ul class="nav-links">
+                        <li><a href="#" class="recent selected" data-option="recent">Most Recent</a></li>
+                        <li>|</li>
+                        <!--<li><a href="#" class="veterans" data-option="veterans">Veterans</a></li>
+                        <li>|</li>-->
+                        <li><a href="#" class="featured" data-option="featured">Featured</a></li>
+                    </ul>
+                    <div class="feed">
+                        <div class="featured"></div>
+                        <div class="veterans"></div>
+                        <div class="popular"></div>
+                        <div class="recent"></div>
+                    </div>
                 </section>
 
                 {block:IfCollaborator1Name}
@@ -1714,5 +1711,3 @@ ol.notes .avatar{width: 30px; padding-right: 10px;}
 
     </body>
 </html>
-
-
