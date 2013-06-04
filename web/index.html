@@ -30,6 +30,7 @@
         <script src="//static.tumblr.com/ybjxbev/wJTmnkk52/jquery.nivo-v3.2.js"></script>
         <script src="//static.tumblr.com/ggljfev/dd6mn48jc/modernizr-2.6.2-respond-1.1.0.min.js"></script>
         <script src="//static.tumblr.com/ggljfev/ljEmn48ha/moment-2.0.0.min.js"></script>
+        <script src="//static.tumblr.com/edmq1ti/nU8mnvpoy/jquery.fitvids.js"></script>
         <!--[if lte IE 8]>
           <script src="http://static.tumblr.com/edmq1ti/EUqmnr4a5/selectivizr.js"></script>
           <script src="http://static.tumblr.com/edmq1ti/8NNmnr48x/css3-mediaqueries.js"></script>
@@ -63,6 +64,9 @@ function getPhotos(target, paramString){
 }
 
 $(function(){
+
+  //video width
+  $("#featured-media-wrapper").fitVids();
 
   getPhotos("recent", "");
 
