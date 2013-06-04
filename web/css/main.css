@@ -302,6 +302,9 @@ section h3 {
     padding-bottom: 0;
     text-align: center;
 }
+li .ShareLinks {
+    text-align: left;
+}
 .ShareLinks::before {
     display: inline-block;
     content: "Share this: ";
@@ -858,19 +861,25 @@ ul.tags li:last-child::after {
     margin-bottom: 20px
 }
 
+li .ShareLinks a,
 .rmeta .ShareLinks a {
     display: inline-block;
     width: 28px;
     height: 27px;
     background: url('http://static.tumblr.com/edmq1ti/Fjsmntiz5/share_buttons.png');
 }
+li .ShareLinks a,
 .rmeta .ShareLinks::before {
     font-family: DINreg;
     font-size: 22px;
 }
+li .ShareLinks .twitter,
 .rmeta .ShareLinks .twitter { background-position: 0 0; }
+li .ShareLinks .facebook,
 .rmeta .ShareLinks .facebook { background-position: -36px 0; }
+li .ShareLinks .reddit,
 .rmeta .ShareLinks .reddit { background-position: -72px 0; }
+li .ShareLinks .digg,
 .rmeta .ShareLinks .digg { background-position: -108px 0; }
 
 .box ul.tags li, .box ul.tags li a{
