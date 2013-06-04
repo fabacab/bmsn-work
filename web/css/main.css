@@ -288,6 +288,7 @@ section h3 {
 #campaign-tweet-this .section-description span {
     display: block;
 }
+.ShareLinks,
 .social_buttons,
 #photo-buttons,
 #campaign-tweet-this ul,
@@ -296,6 +297,26 @@ section h3 {
     clear: both;
     list-style-type: none;
     margin: 0; padding: 0 0 30px 0;
+}
+.ShareLinks {
+    padding-bottom: 0;
+    text-align: center;
+}
+.ShareLinks::before {
+    display: inline-block;
+    content: "Share this: ";
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+.ShareLinks li {
+    display: inline;
+}
+.ShareLinks a {
+    text-indent: -9999px;
+}
+header .ShareLinks::before {
+    font-family: DINmed;
+    font-size: 36px;
 }
 #campaign-tweet-this li a {
     position: relative;
@@ -837,20 +858,21 @@ ul.tags li:last-child::after {
     margin-bottom: 20px
 }
 
-.sharers a{
-    display: block;
-    float: left;
+.rmeta .ShareLinks a {
+    display: inline-block;
     width: 28px;
     height: 27px;
     background: url('http://static.tumblr.com/edmq1ti/Fjsmntiz5/share_buttons.png');
-    margin-right: 10px;
-    text-indent: -9999px;
 }
-.sharers span{display: block; float: left; font-size: 22px; margin-top: 6px; margin-right: 4px; font-family: DINreg;}
-.sharers .twitter{background-position: 0 0}
-.sharers .facebook{background-position: -36px 0}
-.sharers .reddit{background-position: -72px 0}
-.sharers .digg{background-position: -108px 0}
+.rmeta .ShareLinks::before {
+    font-family: DINreg;
+    font-size: 22px;
+}
+.rmeta .ShareLinks .twitter { background-position: 0 0; }
+.rmeta .ShareLinks .facebook { background-position: -36px 0; }
+.rmeta .ShareLinks .reddit { background-position: -72px 0; }
+.rmeta .ShareLinks .digg { background-position: -108px 0; }
+
 .box ul.tags li, .box ul.tags li a{
     color: #c1272d;
     font-size: 15px;
