@@ -853,7 +853,15 @@ margin-right: 120px;
     margin-bottom: 20px
 }
 
-.sharers a{display: block; float: left; width: 28px; height: 27px; background: url(http://static.tumblr.com/edmq1ti/Fjsmntiz5/share_buttons.png); margin-right: 10px}
+.sharers a{
+    display: block;
+    float: left;
+    width: 28px;
+    height: 27px;
+    background: url('http://static.tumblr.com/edmq1ti/Fjsmntiz5/share_buttons.png');
+    margin-right: 10px;
+    text-indent: -9999px;
+}
 .sharers span{display: block; float: left; font-size: 22px; margin-top: 6px; margin-right: 4px; font-family: DINreg;}
 .sharers .twitter{background-position: 0 0}
 .sharers .facebook{background-position: -36px 0}
