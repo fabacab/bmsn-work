@@ -483,12 +483,6 @@ header h3 {
     padding:10px;
     margin-top: -10px;
 }
-#featured-media-wrapper {
-    display: block;
-    width: 840px !important;
-    margin: 40px 0px 10px 0px;
-    text-align: center;
-}
 #featured-media-description {
     text-align: justify;
     font-size: 20px;
@@ -716,9 +710,11 @@ ul.tags li:last-child::after {
 .nivo-controlNav a.active {
     font-weight:bold;
 }
-#slider-wrapper{
+#featured-media-wrapper,
+#slider-wrapper {
     width: 840px;
-    margin: 20px auto;
+    margin: 20px auto 15px;
+    text-align: center;
 }
 
 /* ==========================================================================
