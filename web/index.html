@@ -1297,7 +1297,6 @@ ol.notes .avatar{width: 30px; padding-right: 10px;}
                         </div>
                     </div>
                     {/block:IfSlider1Image}
-                    {block:IfFeaturedMediaDescription}<div id="featured-media-description">{text:Featured media description}</div>{/block:IfFeaturedMediaDescription}
                     {block:IfFeaturedMediaShareURL}
                     <ul class="ShareLinks">
                         <li><a href="https://twitter.com/intent/tweet/?text={URLEncodedTitle}%3A%20{text:Featured media share URL}%20{block:Twitter}%20%2Fvia%20%40{TwitterUsername}{/block:Twitter}%20%23IamBradleyManning" class="twitter" {Target}><img src="http://static.tumblr.com/ybjxbev/9MTmnw8w9/icon.twitter.black.48x48.png" alt="{lang:Share this}: Twitter" /></a></li>
@@ -1306,6 +1305,7 @@ ol.notes .avatar{width: 30px; padding-right: 10px;}
                         <li><a href="http://digg.com/submit?url={text:Featured media share URL}" class="digg" {Target}><img src="http://static.tumblr.com/ybjxbev/kVomnw8tw/icon.digg.black.48x48.png" alt="{lang:Share this}: Digg" /></a></li>
                     </ul>
                     {/block:IfFeaturedMediaShareURL}
+                    {block:IfFeaturedMediaDescription}<div id="featured-media-description">{text:Featured media description}</div>{/block:IfFeaturedMediaDescription}
                     <ul class="social_buttons">
                         {block:IfThunderclapURL}<li id="thunderclap-link"><a href="{text:Thunderclap URL}" {Target}>{text:Thunderclap link text}</a></li>{/block:IfThunderclapURL}
                         {block:IfFacebookURL}<li id="facebook-link"><a href="{text:Facebook URL}" {Target}>{text:Facebook link text}</a></li>{/block:IfFacebookURL}
