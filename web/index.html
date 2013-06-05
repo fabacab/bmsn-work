@@ -610,7 +610,7 @@ li .ShareLinks {
 }
 .ShareLinks::before {
     display: inline-block;
-    content: "{lang:Share this}: ";
+    content: "Share this: ";
     text-transform: uppercase;
     vertical-align: middle;
 }
@@ -791,7 +791,18 @@ header h3 {
     font-size: 20px;
     padding-bottom: 3px;
 }
+#campaign-tweet-this {
+    margin-bottom: 15px;
+}
+#campaign-tweet-this, #campaign-tweet-this ul {
+    padding-bottom: 0;
+}
 /* Social and photo buttons should usually just be arrayed in sets of two. */
+#social_buttons {
+    margin-top: 15px;
+    border-top: 0;
+    padding-top: 0;
+}
 .social_buttons li,
 #photo-buttons li {
     float: left;
@@ -824,12 +835,11 @@ header h3 {
     text-decoration: none;
 }
 .social_buttons a {
-    background-color: #ccc;
     color: #fff;
-    background-color: #B30015;
+    background-color: #72A1BB;
 }
 .social_buttons a:hover {
-    background-color: #900;
+    background-color: #5791B1;
 }
 #photo-buttons a {
     color: #fff;
