@@ -288,6 +288,7 @@ section h3 {
 #campaign-tweet-this .section-description span {
     display: block;
 }
+.ShareLinks,
 .social_buttons,
 #photo-buttons,
 #campaign-tweet-this ul,
@@ -296,6 +297,29 @@ section h3 {
     clear: both;
     list-style-type: none;
     margin: 0; padding: 0 0 30px 0;
+}
+.ShareLinks {
+    padding-bottom: 0;
+    text-align: center;
+}
+li .ShareLinks {
+    text-align: left;
+}
+.ShareLinks::before {
+    display: inline-block;
+    content: "Share this: ";
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+.ShareLinks li {
+    display: inline;
+}
+.ShareLinks a {
+    text-indent: -9999px;
+}
+header .ShareLinks::before {
+    font-family: DINmed;
+    font-size: 36px;
 }
 #campaign-tweet-this li a {
     position: relative;
@@ -808,23 +832,7 @@ ul.tags li:last-child::after {
 #photo-feed .nav-links li a.selected, #photo-feed .nav-links li a:hover{
 	color: #645153;
 }
-.abouttextblock .shortlink a{color: #c1272d; text-decoration: none; margin-left: 5px;}
-.abouttextblock .shortlink{
-    clear: both;
-float: right;
-margin-top: 20px;
-margin-right: 120px;
-}
-.aboutsharetxt{display: block; float: left; font-size: 22px; margin-top: 6px; margin-right: 4px; font-family: DINreg;}
-.abouttextblock{list-style: none; margin: 0; padding: 0;}
-.abouttextblock .ShareLinks{float: right; width: 400px}
-.abouttextblock .ShareLinks ul{list-style: none; margin: 0; padding: 0;}
-.abouttextblock .share-on-twitter, .abouttextblock .share-on-twitter a{display: block; float: left; width: 28px; height: 27px; background: url(http://static.tumblr.com/edmq1ti/Fjsmntiz5/share_buttons.png); margin-right: 10px; text-indent: -9999px; background-position: 0 0;}
-.abouttextblock .share-on-facebook, .abouttextblock .share-on-facebook a{display: block; float: left; width: 28px; height: 27px; background: url(http://static.tumblr.com/edmq1ti/Fjsmntiz5/share_buttons.png); margin-right: 10px; text-indent: -9999px; background-position: -36px 0;}
-.abouttextblock .share-on-reddit, .abouttextblock .share-on-reddit a{display: block; float: left; width: 28px; height: 27px; background: url(http://static.tumblr.com/edmq1ti/Fjsmntiz5/share_buttons.png); margin-right: 10px; text-indent: -9999px; background-position: -72px 0;}
-.abouttextblock .share-on-digg, .abouttextblock .share-on-digg a{display: block; float: left; width: 28px; height: 27px; background: url(http://static.tumblr.com/edmq1ti/Fjsmntiz5/share_buttons.png); margin-right: 10px; text-indent: -9999px; background-position: -108px 0;}
 .shorturl{clear: both; margin-left: 40px; margin-top: 20px; float: right; margin-right: 80px;}
-
 .shorturl a{color: #c1272d; text-decoration: none; margin-left: 5px;}
 .photoMetaData{
     border-top: 10px solid black;
@@ -853,12 +861,27 @@ margin-right: 120px;
     margin-bottom: 20px
 }
 
-.sharers a{display: block; float: left; width: 28px; height: 27px; background: url(http://static.tumblr.com/edmq1ti/Fjsmntiz5/share_buttons.png); margin-right: 10px}
-.sharers span{display: block; float: left; font-size: 22px; margin-top: 6px; margin-right: 4px; font-family: DINreg;}
-.sharers .twitter{background-position: 0 0}
-.sharers .facebook{background-position: -36px 0}
-.sharers .reddit{background-position: -72px 0}
-.sharers .digg{background-position: -108px 0}
+li .ShareLinks a,
+.rmeta .ShareLinks a {
+    display: inline-block;
+    width: 28px;
+    height: 27px;
+    background: url('http://static.tumblr.com/edmq1ti/Fjsmntiz5/share_buttons.png');
+}
+li .ShareLinks a,
+.rmeta .ShareLinks::before {
+    font-family: DINreg;
+    font-size: 22px;
+}
+li .ShareLinks .twitter,
+.rmeta .ShareLinks .twitter { background-position: 0 0; }
+li .ShareLinks .facebook,
+.rmeta .ShareLinks .facebook { background-position: -36px 0; }
+li .ShareLinks .reddit,
+.rmeta .ShareLinks .reddit { background-position: -72px 0; }
+li .ShareLinks .digg,
+.rmeta .ShareLinks .digg { background-position: -108px 0; }
+
 .box ul.tags li, .box ul.tags li a{
     color: #c1272d;
     font-size: 15px;
