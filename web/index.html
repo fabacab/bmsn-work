@@ -27,6 +27,7 @@
         <meta name="text:Hero name" content="Bradley Manning">
         <meta name="text:Featured media" content="">
         <meta name="text:Featured media description" content="">
+        <meta name="text:Featured media share URL" content="">
         <meta name="text:Imprisoned on date" content="May 19, 2010">
         <meta name="text:Thunderclap URL" content="">
         <meta name="text:Thunderclap link text" content="">
@@ -1297,12 +1298,14 @@ ol.notes .avatar{width: 30px; padding-right: 10px;}
                     </div>
                     {/block:IfSlider1Image}
                     {block:IfFeaturedMediaDescription}<div id="featured-media-description">{text:Featured media description}</div>{/block:IfFeaturedMediaDescription}
+                    {block:IfFeaturedMediaShareURL}
                     <ul class="ShareLinks">
-                        <li><a href="TK-LINK" class="twitter"><img src="img/icon.twitter.black.48x48.png" alt="Share this: Twitter" /></a></li>
-                        <li><a href="TK-LINK" class="facebook"><img src="img/icon.facebook.black.48x48.png" alt="Share this: Facebook" /></a></li>
-                        <li><a href="TK-LINK" class="reddit"><img src="img/icon.reddit.black.48x48.gif" alt="Share this: Reddit" /></a></li>
-                        <li><a href="TK-LINK" class="digg"><img src="img/icon.digg.black.48x48.png" alt="Share this: Digg" /></a></li>
+                        <li><a href="https://twitter.com/intent/tweet/?text={URLEncodedTitle}%3A%20{text:Featured media share URL}%20{block:Twitter}%20%2Fvia%20%40{TwitterUsername}{/block:Twitter}%20%23IamBradleyManning" class="twitter" {Target}><img src="http://static.tumblr.com/ybjxbev/9MTmnw8w9/icon.twitter.black.48x48.png" alt="{lang:Share this}: Twitter" /></a></li>
+                        <li><a href="https://www.facebook.com/share.php?u={text:Featured media share URL}" class="facebook" {Target}><img src="http://static.tumblr.com/ybjxbev/SAzmnw8v7/icon.facebook.black.48x48.png" alt="{lang:Share this}: Facebook" /></a></li>
+                        <li><a href="http://www.reddit.com/submit?url={text:Featured media share URL}&amp;title={URLEncodedTitle}" class="reddit" {Target}><img src="http://static.tumblr.com/ybjxbev/CUzmnw8vr/icon.reddit.black.48x48.gif" alt="{lang:Share this}: Reddit" /></a></li>
+                        <li><a href="http://digg.com/submit?url={text:Featured media share URL}" class="digg" {Target}><img src="http://static.tumblr.com/ybjxbev/kVomnw8tw/icon.digg.black.48x48.png" alt="{lang:Share this}: Digg" /></a></li>
                     </ul>
+                    {/block:IfFeaturedMediaShareURL}
                     <ul class="social_buttons">
                         {block:IfThunderclapURL}<li id="thunderclap-link"><a href="{text:Thunderclap URL}" {Target}>{text:Thunderclap link text}</a></li>{/block:IfThunderclapURL}
                         {block:IfFacebookURL}<li id="facebook-link"><a href="{text:Facebook URL}" {Target}>{text:Facebook link text}</a></li>{/block:IfFacebookURL}
