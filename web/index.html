@@ -1301,12 +1301,6 @@ ol.notes .avatar{width: 30px; padding-right: 10px;}
                     </ul>
                     {/block:IfFeaturedMediaShareURL}
                     {block:IfFeaturedMediaDescription}<div id="featured-media-description">{text:Featured media description}</div>{/block:IfFeaturedMediaDescription}
-                    <ul class="social_buttons">
-                        {block:IfThunderclapURL}<li id="thunderclap-link"><a href="{text:Thunderclap URL}" {Target}>{text:Thunderclap link text}</a></li>{/block:IfThunderclapURL}
-                        {block:IfFacebookURL}<li id="facebook-link"><a href="{text:Facebook URL}" {Target}>{text:Facebook link text}</a></li>{/block:IfFacebookURL}
-                        {block:IfTwibbonURL}<li id="twibbon-link"><a href="{text:Twibbon URL}" {Target}>{text:Twibbon link text}</a></li>{/block:IfTwibbonURL}
-                        {block:IfPetitionURL}<li id="petition-link"><a href="{text:Petition URL}" {Target}>{text:Petition link text}</a></li>{/block:IfPetitionURL}
-                    </ul>
                     {/block:IndexPage}
                 </header>
 
@@ -1656,6 +1650,15 @@ ol.notes .avatar{width: 30px; padding-right: 10px;}
                     </ul>
                 </section>
                 {/block:IfTweet1}
+
+                <section id="social_buttons" class="clearfix">
+                    <ul class="social_buttons">
+                        {block:IfThunderclapURL}<li id="thunderclap-link"><a href="{text:Thunderclap URL}" {Target}>{text:Thunderclap link text}</a></li>{/block:IfThunderclapURL}
+                        {block:IfFacebookURL}<li id="facebook-link"><a href="{text:Facebook URL}" {Target}>{text:Facebook link text}</a></li>{/block:IfFacebookURL}
+                        {block:IfTwibbonURL}<li id="twibbon-link"><a href="{text:Twibbon URL}" {Target}>{text:Twibbon link text}</a></li>{/block:IfTwibbonURL}
+                        {block:IfPetitionURL}<li id="petition-link"><a href="{text:Petition URL}" {Target}>{text:Petition link text}</a></li>{/block:IfPetitionURL}
+                    </ul>
+                </section>
 
                 <section id="photo-feed">
                     <h3>Your Photos</h3>
