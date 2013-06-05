@@ -713,7 +713,7 @@ ul.tags li:last-child::after {
 #featured-media-wrapper,
 #slider-wrapper {
     width: 840px;
-    margin: 20px auto 15px;
+    margin: 20px auto;
     text-align: center;
 }
 
